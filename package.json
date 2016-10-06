@@ -1,0 +1,29 @@
+{
+  "name": "ember-cli-prune-style-tree",
+  "keywords": [
+    "ember-addon"
+  ],
+  "ember-addon": {
+    "before": "ember-cli-sass"
+  },
+  "dependencies": {
+    "broccoli-source": "^1.1.0"
+  },
+  "version": "1.0.0",
+  "description": "Prunes a the Ember styles tree down to just app/styles",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmfenton/ember-cli-prune-style-tree.git"
+  },
+  "author": "Daniel Fenton <dfenton@esri.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/dmfenton/ember-cli-prune-style-tree/issues"
+  },
+  "homepage": "https://github.com/dmfenton/ember-cli-prune-style-tree#readme"
+}
