@@ -1,11 +1,16 @@
 /*jshint node:true*/
-
-const WatchedDir = require('broccoli-source').WatchedDir;
+const Funnel = require('broccoli-funnel')
 
 function Pruner () {}
 
 Pruner.prototype.toTree = function (tree, inputPath, outputPath, inputOptions) {
-  return new WatchedDir('app/styles', {})
+  // ensure that the tree is not pruned after the sass compiler
+  if (tree._inputNodes[0] && tree._inputNodes[0]._name === 'SassCompiler') return tree
+  return new Funnel('app/styles', {
+    srcDir: '/',
+    destDir: 'app/styles',
+    annotation: 'Funnel (pruned styles)'
+  })
 }
 
 module.exports = {
