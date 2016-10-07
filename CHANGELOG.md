@@ -15,6 +15,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 * Initial release
 
-[1.0.0]: https://github.com/dmfenton/ember-cli-prune-style-tree/compare/v1.0.0..v1.0.1
+[1.0.1]: https://github.com/dmfenton/ember-cli-prune-style-tree/compare/v1.0.0..v1.0.1
 
 [1.0.0]: https://github.com/dmfenton/ember-cli-prune-style-tree/tree/v1.0.0
