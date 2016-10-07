@@ -9,7 +9,7 @@
   "dependencies": {
     "broccoli-funnel": "^1.0.7"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Prunes a the Ember styles tree down to just app/styles",
   "main": "index.js",
   "devDependencies": {},
