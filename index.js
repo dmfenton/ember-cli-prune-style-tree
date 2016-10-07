@@ -6,6 +6,7 @@ function Pruner () {}
 Pruner.prototype.toTree = function (tree, inputPath, outputPath, inputOptions) {
   // ensure that the tree is not pruned after the sass compiler
   if (tree._inputNodes[0] && tree._inputNodes[0]._name === 'SassCompiler') return tree
+  
   return new Funnel('app/styles', {
     srcDir: '/',
     destDir: 'app/styles',
@@ -19,7 +20,8 @@ module.exports = {
   setupPreprocessorRegistry (type, registry) {
     registry.add('css', new Pruner());
   },
-  included: function included(app) {
+
+  included (app) {
     this._super.included.apply(this, arguments);
     this.app = app;
     this.setupPreprocessorRegistry('parent', app.registry);
